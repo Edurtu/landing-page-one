@@ -1,0 +1,147 @@
+body {
+    background-color: rgba(0, 0, 0, 0.9);
+    margin: 0em;
+    color: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header::after {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/header_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 800ms;
+}
+
+.header:hover::after {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+.header:hover .header-content{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.header-content {
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -145px;
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    transition: all 800ms;
+}
+
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+}
+.text {
+    line-height: 1.7rem;
+}
+
+.services {
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+.text-center {
+    text-align: center;
+    margin: auto;
+}
+
+.bg-light {
+    background-color: whitesmoke;
+    color: #050505;
+}
+
+.footer {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* RESPONSIVE */
+@media(max-width: 560px) {
+    
+    .header::after {
+        height: 40vh;
+    }
+
+    .header-content {
+        top: 5%;
+        margin-top: 05px;
+    }
+
+    .header-content .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header-content .title {
+        font-size: 1.7rem;
+    }
+
+    .header-content .text {
+        display: none;
+    }
+
+    .grid-3, .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .services {
+        padding: 1rem;
+    }
+}
+
+@media (max-height: 500px){
+
+    .header-content {
+        top: 10%;
+        margin-top: 0px;
+    }
+
+    .header-content .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header-content .title {
+        margin: 1.3rem 0;
+    }
+    .header-content .text {
+        line-height: 1.5rem;
+    }
+
+}
